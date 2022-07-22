@@ -52,6 +52,7 @@
        CFG_TUSB_MCU == OPT_MCU_STM32F7                               || \
        CFG_TUSB_MCU == OPT_MCU_STM32H7                               || \
       (CFG_TUSB_MCU == OPT_MCU_STM32L4 && defined(STM32L4_SYNOPSYS)  || \
+       CFG_TUSB_MCU == OPT_MCU_STM32U5                               || \
        CFG_TUSB_MCU == OPT_MCU_GD32VF103 )                           \
     )
 
@@ -90,6 +91,11 @@
 
 #elif CFG_TUSB_MCU == OPT_MCU_STM32L4
 #include "stm32l4xx.h"
+#define EP_MAX_FS       6
+#define EP_FIFO_SIZE_FS 1280
+
+#elif CFG_TUSB_MCU == OPT_MCU_STM32U5
+#include "stm32u5xx.h"
 #define EP_MAX_FS       6
 #define EP_FIFO_SIZE_FS 1280
 

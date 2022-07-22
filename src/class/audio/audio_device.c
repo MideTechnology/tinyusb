@@ -96,6 +96,7 @@
     CFG_TUSB_MCU == OPT_MCU_STM32F7                               || \
     CFG_TUSB_MCU == OPT_MCU_STM32H7                               || \
     (CFG_TUSB_MCU == OPT_MCU_STM32L4 && defined(STM32L4_SYNOPSYS)) || \
+    CFG_TUSB_MCU == OPT_MCU_STM32U5                               || \
     CFG_TUSB_MCU == OPT_MCU_RX63X                                 || \
     CFG_TUSB_MCU == OPT_MCU_RX65X                                 || \
     CFG_TUSB_MCU == OPT_MCU_RX72N                                 || \
